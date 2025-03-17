@@ -1,39 +1,51 @@
-import LanguageButton from './LanguageButton'
-import ThemeToggle from './ThemeToggle'
+import LanguageButton from './LanguageButton';
+import ThemeToggle from './ThemeToggle';
 
-function NavBar() {
+function NavBar({ setActiveSection, activeSection }) {
   return (
     <div className="flex justify-between items-center h-[60px] min-h-[60px]">
       <nav className="card p-4 h-full flex items-center">
         <ul className="flex gap-10 mx-4">
           <li>
-            <a href="#about" className="text-amber-400 hover:text-amber-300">
+            <button
+              onClick={() => setActiveSection('about')}
+              className={`${activeSection === 'about' ? 'text-amber-400' : 'text-zinc-400'} hover:text-amber-300`}
+            >
               Sobre mí
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#resume" className="text-zinc-400 hover:text-amber-400">
+            <button
+              onClick={() => setActiveSection('resume')}
+              className={`${activeSection === 'resume' ? 'text-amber-400' : 'text-zinc-400'} hover:text-amber-300`}
+            >
               Resumen
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#portfolio" className="text-zinc-400 hover:text-amber-400">
+            <button
+              onClick={() => setActiveSection('projects')}
+              className={`${activeSection === 'projects' ? 'text-amber-400' : 'text-zinc-400'} hover:text-amber-300`}
+            >
               Proyectos
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#blog" className="text-zinc-400 hover:text-amber-400">
+            <button
+              onClick={() => setActiveSection('games')}
+              className={`${activeSection === 'games' ? 'text-amber-400' : 'text-zinc-400'} hover:text-amber-300`}
+            >
               Habilidades
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
       <div className="flex gap-4 justify-end">
-          <LanguageButton />
-          <ThemeToggle />
+        <LanguageButton />
+        <ThemeToggle />
       </div>
     </div>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

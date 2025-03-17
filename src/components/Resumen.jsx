@@ -1,3 +1,4 @@
+import { Book, Briefcase } from "lucide-react"
 function Resume() {
   const education = [
     {
@@ -16,7 +17,7 @@ function Resume() {
     {
       title: "Software Engineer Intern",
       company: "Wherex",
-      period: "Jun, 2024 — Sep, 2024 • 3 meses",
+      period: "Jun, 2024 — Sep, 2024 • 4 meses",
       location: "Chile",
       responsibilities: [
         "Desarrollé un microservicio para la integración de un chatbot utilizando PHP, JavaScript y Python.",
@@ -28,61 +29,59 @@ function Resume() {
 
 
   return (
-    <section id="resume" className="space-y-8">
-      <div className="relative">
-        {/* Education section */}
-        <div className="absolute left-0 top-[28px] h-[calc(100%-28px)] w-[2px] bg-zinc-800">
-          {/* Punto principal de la sección */}
-          <div className="absolute -left-[5px] -top-[5px] h-3 w-3 rounded-full bg-amber-400"></div>
+    <div>
+      {/* Education Section */}
+      <div className="mb-10">
+        <div className="flex items-center gap-3 mb-6">
+          <Book className="text-white" size={24} />
+          <h2 className="text-2xl font-bold">Educación</h2>
         </div>
-        <div className="pl-8">
-          <h2 className="text-3xl font-bold mb-6">Education</h2>
-          <div className="space-y-6">
-            {education.map((edu, index) => (
-              <div key={index} className="relative">
-                {/* Línea vertical para cada elemento */}
-                <div className="absolute -left-9 top-[28px] h-3 w-3 rounded-full bg-amber-400"></div>
-                <div className="bg-zinc-900/50 p-6 rounded-xl">
-                  <h3 className="text-xl font-semibold text-amber-400">{edu.school}</h3>
-                  <p className="text-zinc-400">{edu.degree}</p>
-                  <p className="text-zinc-500 text-sm">{edu.period}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+
+        <div className="relative">
+          <div className="absolute left-[7px] top-0 bottom-0 w-[2px] bg-gray-800"></div>
+
+          {education.map((item, index) => (
+            <div key={index} className="mb-8 relative pl-10">
+              <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-yellow-500 z-10"></div>
+              <h3 className="text-lg font-semibold">{item.institution}</h3>
+              <p className="text-gray-300 mt-1">{item.degree}</p>
+              <p className="text-yellow-500 mt-1 font-medium">{item.period}</p>
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="relative">
-        {/* Experience section */}
-        <div className="absolute left-0 top-[28px] h-[calc(100%-28px)] w-[2px] bg-zinc-800">
-          {/* Punto principal de la sección */}
-          <div className="absolute -left-[5px] -top-[5px] h-3 w-3 rounded-full bg-amber-400"></div>
+      {/* Experience Section */}
+      <div>
+        <div className="flex items-center gap-3 mb-6">
+          <Briefcase className="text-white" size={24} />
+          <h2 className="text-2xl font-bold">Experiencia</h2>
         </div>
-        <div className="pl-8">
-          <h2 className="text-3xl font-bold mb-6">Experience</h2>
-          <div className="space-y-6">
-            {experience.map((exp, index) => (
-              <div key={index} className="relative">
-                {/* Línea vertical para cada elemento */}
-                <div className="absolute -left-9 top-[28px] h-3 w-3 rounded-full bg-amber-400"></div>
-                <div className="bg-zinc-900/50 p-6 rounded-xl">
-                  <h3 className="text-xl font-semibold text-amber-400">{exp.title}</h3>
-                  <p className="text-zinc-400">{exp.company}</p>
-                  <p className="text-zinc-500 text-sm mb-4">{exp.period} </p>
-                  <p className="text-zinc-500 text-sm mb-4"> {exp.location}</p>
-                  <ul className="list-disc list-inside space-y-2 text-zinc-400">
-                    {exp.responsibilities.map((resp, idx) => (
-                      <li key={idx}>{resp}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+
+        <div className="relative">
+          <div className="absolute left-[7px] top-0 bottom-0 w-[2px] bg-gray-800"></div>
+
+          {experience.map((item, index) => (
+            <div key={index} className="mb-8 relative pl-10">
+              <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-yellow-500 z-10"></div>
+              <h3 className="text-lg font-semibold">{item.position}</h3>
+              <p className="text-gray-300 mt-1">{item.company}</p>
+              <p className="text-yellow-500 mt-1 font-medium">{item.period}</p>
+              <p className="text-gray-300 mt-1">{item.location}</p>
+
+              <ul className="mt-3 space-y-2">
+                {item.responsibilities.map((responsibility, respIndex) => (
+                  <li key={respIndex} className="flex items-start">
+                    <span className="text-yellow-500 mr-2">•</span>
+                    <span>{responsibility}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
