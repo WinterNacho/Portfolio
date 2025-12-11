@@ -5,24 +5,45 @@
     <link rel="icon" type="image/x-icon" href="/copo-de-nieve.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Prevent theme flash on load -->
+    <style>
+      /* Critical CSS to prevent flash */
+      html, body {
+        background-color: #09090b;
+        color: #e4e4e7;
+        margin: 0;
+        padding: 0;
+      }
+      html[data-theme="light"], html[data-theme="light"] body {
+        background-color: #faf8f5;
+        color: #2d2a27;
+      }
+    </style>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+    
     <!-- Primary Meta Tags -->
-    <title>Ignacio Muñoz | Software Engineer</title>
-    <meta name="title" content="Ignacio Muñoz | Software Engineer" />
-    <meta name="description" content="Software Engineer specialized in web development, backend systems, and mobile applications. Computer Engineering student at Universidad de Chile." />
-    <meta name="author" content="Ignacio Muñoz" />
+    <title>Ignacio Muñoz Otárola | Software Engineer</title>
+    <meta name="title" content="Ignacio Muñoz Otárola | Software Engineer" />
+    <meta name="description" content="Software Engineer con experiencia construyendo soluciones que llegan a producción y generan impacto real en usuarios y equipos. Enfocado en depuración, optimización de sistemas y entrega de funcionalidades útiles." />
+    <meta name="author" content="Ignacio Muñoz Otárola" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ignaciomunoz.dev/" />
-    <meta property="og:title" content="Ignacio Muñoz | Software Engineer" />
-    <meta property="og:description" content="Software Engineer specialized in web development, backend systems, and mobile applications." />
+    <meta property="og:title" content="Ignacio Muñoz Otárola | Software Engineer" />
+    <meta property="og:description" content="Software Engineer con experiencia construyendo soluciones que llegan a producción y generan impacto real." />
     <meta property="og:image" content="/me.JPG" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ignaciomunoz.dev/" />
-    <meta property="twitter:title" content="Ignacio Muñoz | Software Engineer" />
-    <meta property="twitter:description" content="Software Engineer specialized in web development, backend systems, and mobile applications." />
+    <meta property="twitter:title" content="Ignacio Muñoz Otárola | Software Engineer" />
+    <meta property="twitter:description" content="Software Engineer con experiencia construyendo soluciones que llegan a producción y generan impacto real." />
     <meta property="twitter:image" content="/me.JPG" />
     
     <!-- Additional Meta Tags -->

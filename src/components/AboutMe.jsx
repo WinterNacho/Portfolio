@@ -1,28 +1,28 @@
-import { Code, Database, GraduationCap, Server, Cloud, Layers } from "lucide-react"
+import { Database, GraduationCap, Bug, Code, Zap } from "lucide-react"
 import { useTranslation } from "../hooks/useTranslation"
 
 function AboutMe() {
   const { t } = useTranslation()
   const specializationsData = [
     {
-      title: t('about.specializations.fullstack.title'),
-      description: t('about.specializations.fullstack.description'),
-      icon: Layers,
-    },
-    {
-      title: t('about.specializations.api.title'),
-      description: t('about.specializations.api.description'),
-      icon: Server,
-    },
-    {
-      title: t('about.specializations.database.title'),
-      description: t('about.specializations.database.description'),
+      title: t('about.specializations.optimization.title'),
+      description: t('about.specializations.optimization.description'),
       icon: Database,
     },
     {
-      title: t('about.specializations.cloud.title'),
-      description: t('about.specializations.cloud.description'),
-      icon: Cloud,
+      title: t('about.specializations.debugging.title'),
+      description: t('about.specializations.debugging.description'),
+      icon: Bug,
+    },
+    {
+      title: t('about.specializations.backend.title'),
+      description: t('about.specializations.backend.description'),
+      icon: Code,
+    },
+    {
+      title: t('about.specializations.integration.title'),
+      description: t('about.specializations.integration.description'),
+      icon: Zap,
     },
   ]
 

@@ -114,8 +114,8 @@ The build output will be in the `dist/` folder, ready to deploy to:
 
 ## 👤 Author
 
-**Ignacio Muñoz**
-- Email: ignaciomu216@gmail.com
+**Ignacio Muñoz Otárola**
+- Email: winternacho@gmail.com
 - LinkedIn: [linkedin.com/in/winternacho](https://www.linkedin.com/in/winternacho)
 - GitHub: [@WinterNacho](https://github.com/WinterNacho)
 - X (Twitter): [@WinterNacho](https://x.com/WinterNacho)

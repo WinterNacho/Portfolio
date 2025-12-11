@@ -139,6 +139,15 @@
   }
 }
 
+/* Desktop and Tablet: Fixed sidebar width */
+@media (min-width: 769px) {
+  aside.card-container {
+    min-width: 320px;
+    max-width: 320px;
+    flex-shrink: 0;
+  }
+}
+
 /* Tablet: Narrower sidebar */
 @media (min-width: 769px) and (max-width: 1024px) {
   aside.card-container {

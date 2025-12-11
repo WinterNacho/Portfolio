@@ -5,32 +5,32 @@
     "projects": "Proyectos"
   },
   "profile": {
-    "name": "Ignacio Muñoz",
+    "name": "Ignacio Muñoz Otárola",
     "role": "Software Engineer",
-    "email": "ignaciomu216@gmail.com",
+    "email": "winternacho@gmail.com",
     "location": "Santiago, Chile",
     "available": "Disponible para trabajar"
   },
   "about": {
     "title": "Sobre mí",
-    "description": "¡Hola! Soy Ignacio Muñoz, ingeniero en computación con una gran pasión por la tecnología y la resolución de problemas. Me encanta desarrollar software y optimizar algoritmos. Aquí encontrarás mis proyectos, experiencia y lo que me motiva en el mundo de la tecnología.",
+    "description": "Software Engineer con experiencia construyendo soluciones que llegan a producción y generan impacto real en usuarios y equipos. Enfocado en depuración, optimización de sistemas y entrega de funcionalidades útiles que aportan valor concreto.",
     "specializations": {
-      "title": "Áreas de Especialización",
-      "fullstack": {
-        "title": "Full Stack Development",
-        "description": "Desarrollo completo de aplicaciones web con React, Node.js y bases de datos modernas"
+      "title": "Lo que domino",
+      "optimization": {
+        "title": "Optimización de Bases de Datos",
+        "description": "Profiling y optimización de queries SQL para reducir tiempos de respuesta en producción"
       },
-      "api": {
-        "title": "API Development",
-        "description": "Diseño e implementación de APIs REST y GraphQL escalables y seguras"
+      "debugging": {
+        "title": "Debugging en Producción",
+        "description": "Resolución de bugs en sistemas multi-tecnología: PHP, JavaScript, Go, Angular, React"
       },
-      "database": {
-        "title": "Database Design",
-        "description": "Arquitectura y optimización de bases de datos SQL y NoSQL"
+      "backend": {
+        "title": "Desarrollo Backend",
+        "description": "Aplicaciones .NET, sistemas de autenticación con biometría, y microservicios"
       },
-      "cloud": {
-        "title": "Cloud & DevOps",
-        "description": "Despliegue y automatización con Docker, CI/CD y servicios cloud"
+      "integration": {
+        "title": "Integraciones & Automatización",
+        "description": "APIs, chatbots con IA, y automatización de procesos para equipos"
       }
     }
   },
@@ -41,7 +41,7 @@
       {
         "institution": "Universidad de Chile",
         "degree": "Ingeniería Civil en Computación",
-        "period": "2020 — Presente"
+        "period": "2020 — 2025"
       },
       {
         "institution": "Universidad de Chile",
@@ -51,26 +51,41 @@
     ],
     "experienceData": [
       {
-        "title": "Software Engineer Intern",
+        "title": "Software Engineer I",
         "company": "Wherex",
-        "period": "Jun, 2024 — Sep, 2024 • 4 meses",
-        "location": "Chile",
+        "period": "Agosto 2025 — Diciembre 2025",
+        "location": "Santiago, Chile (Remoto)",
         "responsibilities": [
-          "Desarrollé un microservicio para la integración de un chatbot utilizando PHP, JavaScript y Python.",
-          "Colaboré con el equipo de desarrollo para mejorar la integración y eficiencia del sistema.",
-          "Realicé pruebas y depuración del código para asegurar su correcto funcionamiento."
+          "Optimicé queries SQL en la plataforma, reduciendo los tiempos de respuesta al eliminar operaciones innecesarias en las consultas.",
+          "Depuré y resolví bugs en producción en componentes escritos en PHP, JavaScript, Go, Angular y React. Aproveché herramientas asistidas por IA (Windsurf, Codex) para acelerar ciclos de desarrollo y depuración."
         ]
       },
       {
-        "title": "Full Stack Developer",
-        "company": "Tech Solutions",
-        "period": "Ene, 2023 — May, 2024 • 1 año 5 meses",
-        "location": "Santiago, Chile",
+        "title": "Desarrollador Externo",
+        "company": "Ecert",
+        "period": "Junio 2025 — Julio 2025",
+        "location": "Santiago, Chile (Remoto)",
         "responsibilities": [
-          "Desarrollé aplicaciones web completas usando React y Node.js.",
-          "Implementé APIs RESTful y servicios backend escalables.",
-          "Colaboré en el diseño de arquitectura de base de datos PostgreSQL.",
-          "Participé en code reviews y mentoría de desarrolladores junior."
+          "Continuación del trabajo como practicante. Desarrollo de pruebas de concepto y aplicaciones .NET en producción con SQL Server para evaluar factibilidad técnica y respaldar decisiones arquitectónicas del equipo."
+        ]
+      },
+      {
+        "title": "Practicante Software Engineer – Área de Mejora Continua",
+        "company": "Ecert",
+        "period": "Marzo 2025 — Julio 2025",
+        "location": "Santiago, Chile (Híbrido)",
+        "responsibilities": [
+          "Mejoré parte del sistema de autenticación utilizando librerías de biometría, habilitando verificación segura de usuarios en producción.",
+          "Optimicé consultas SQL lentas identificadas mediante profiling y refactoricé jobs programados, reduciendo tiempos de ejecución y carga en base de datos."
+        ]
+      },
+      {
+        "title": "Software Engineer Intern",
+        "company": "Wherex",
+        "period": "Junio 2024 — Septiembre 2024",
+        "location": "Santiago, Chile (Remoto)",
+        "responsibilities": [
+          "Integré chatbot basado en OpenAI en la plataforma y construí microservicio para archivar conversaciones en AWS S3, automatizando respuestas a preguntas frecuentes y reduciendo tickets del equipo de Customer Care."
         ]
       }
     ]
