@@ -8,7 +8,7 @@ function NavBar({ setActiveSection, activeSection }) {
 
   const navItems = [
     { id: 'about', label: t('nav.about') },
-    { id: 'resume', label: t('nav.resume') },
+    { id: 'experience', label: t('nav.experience') },
     { id: 'projects', label: t('nav.projects') }
   ]
 

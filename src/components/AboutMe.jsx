@@ -1,28 +1,28 @@
-import { Smartphone, Code, Gamepad, Database } from "lucide-react"
+import { Code, Database, GraduationCap, Server, Cloud, Layers } from "lucide-react"
 import { useTranslation } from "../hooks/useTranslation"
 
 function AboutMe() {
   const { t } = useTranslation()
-  const servicesData = [
+  const specializationsData = [
     {
-      title: t('about.services.webDev.title'),
-      description: t('about.services.webDev.description'),
-      icon: Code,
+      title: t('about.specializations.fullstack.title'),
+      description: t('about.specializations.fullstack.description'),
+      icon: Layers,
     },
     {
-      title: t('about.services.backend.title'),
-      description: t('about.services.backend.description'),
+      title: t('about.specializations.api.title'),
+      description: t('about.specializations.api.description'),
+      icon: Server,
+    },
+    {
+      title: t('about.specializations.database.title'),
+      description: t('about.specializations.database.description'),
       icon: Database,
     },
     {
-      title: t('about.services.gameDev.title'),
-      description: t('about.services.gameDev.description'),
-      icon: Gamepad,
-    },
-    {
-      title: t('about.services.mobile.title'),
-      description: t('about.services.mobile.description'),
-      icon: Smartphone,
+      title: t('about.specializations.cloud.title'),
+      description: t('about.specializations.cloud.description'),
+      icon: Cloud,
     },
   ]
 
@@ -47,37 +47,65 @@ function AboutMe() {
           className="text-3xl font-bold mb-8"
           style={{ color: 'var(--text-primary)' }}
         >
-          {t('about.whatImDoing')}
+          {t('about.specializations.title')}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {servicesData.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {specializationsData.map((spec, index) => (
             <div 
               key={index} 
-              className="rounded-lg p-6 border flex flex-col"
+              className="rounded-lg p-4 border flex items-center gap-4"
               style={{ 
                 backgroundColor: 'var(--bg-tertiary)', 
                 borderColor: 'var(--border-secondary)' 
               }}
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="p-2 rounded-md">
-                  <service.icon 
-                    className="w-8 h-8"
-                    style={{ color: 'var(--accent-primary)' }}
-                  />
-                </div>
-                <div>
-                  <h3 
-                    className="text-xl font-semibold mb-2"
-                    style={{ color: 'var(--text-primary)' }}
-                  >
-                    {service.title}
-                  </h3>
-                  <p style={{ color: 'var(--text-secondary)' }}>
-                    {service.description}
-                  </p>
-                </div>
+              <div className="p-2 rounded-md flex-shrink-0">
+                <spec.icon 
+                  className="w-7 h-7"
+                  style={{ color: 'var(--accent-primary)' }}
+                />
               </div>
+              <div>
+                <h3 
+                  className="text-lg font-semibold mb-1"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  {spec.title}
+                </h3>
+                <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                  {spec.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section>
+        <div className="flex items-center gap-3 mb-6">
+          <GraduationCap size={28} style={{ color: 'var(--text-primary)' }} />
+          <h2 className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>
+            {t('resume.education')}
+          </h2>
+        </div>
+
+        <div className="space-y-6">
+          {t('resume.educationData').map((item, index) => (
+            <div key={index} className="relative pl-8">
+              <div 
+                className="absolute left-0 top-2 w-3 h-3 rounded-full"
+                style={{ backgroundColor: 'var(--accent-primary)' }}
+              ></div>
+              <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>
+                {item.institution}
+              </h3>
+              <p className="mt-1" style={{ color: 'var(--text-secondary)' }}>
+                {item.degree}
+              </p>
+              <p className="mt-1 text-sm" style={{ color: 'var(--accent-primary)' }}>
+                {item.period}
+              </p>
             </div>
           ))}
         </div>

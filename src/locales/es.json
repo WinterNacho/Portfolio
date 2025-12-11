@@ -1,7 +1,7 @@
 {
   "nav": {
     "about": "Sobre mí",
-    "resume": "Resumen",
+    "experience": "Experiencia",
     "projects": "Proyectos"
   },
   "profile": {
@@ -14,23 +14,23 @@
   "about": {
     "title": "Sobre mí",
     "description": "¡Hola! Soy Ignacio Muñoz, ingeniero en computación con una gran pasión por la tecnología y la resolución de problemas. Me encanta desarrollar software y optimizar algoritmos. Aquí encontrarás mis proyectos, experiencia y lo que me motiva en el mundo de la tecnología.",
-    "whatImDoing": "Lo que estoy haciendo",
-    "services": {
-      "webDev": {
-        "title": "Desarrollo Web",
-        "description": "Creación de sitios web de alta calidad a nivel profesional."
+    "specializations": {
+      "title": "Áreas de Especialización",
+      "fullstack": {
+        "title": "Full Stack Development",
+        "description": "Desarrollo completo de aplicaciones web con React, Node.js y bases de datos modernas"
       },
-      "backend": {
-        "title": "Desarrollo Backend",
-        "description": "Servicios backend optimizados para alto rendimiento y escalabilidad."
+      "api": {
+        "title": "API Development",
+        "description": "Diseño e implementación de APIs REST y GraphQL escalables y seguras"
       },
-      "gameDev": {
-        "title": "Desarrollo de Videojuegos",
-        "description": "Proyectos de videojuegos como hobby."
+      "database": {
+        "title": "Database Design",
+        "description": "Arquitectura y optimización de bases de datos SQL y NoSQL"
       },
-      "mobile": {
-        "title": "Aplicaciones Móviles",
-        "description": "Desarrollo de apps para Android e iOS."
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "description": "Despliegue y automatización con Docker, CI/CD y servicios cloud"
       }
     }
   },
@@ -60,6 +60,18 @@
           "Colaboré con el equipo de desarrollo para mejorar la integración y eficiencia del sistema.",
           "Realicé pruebas y depuración del código para asegurar su correcto funcionamiento."
         ]
+      },
+      {
+        "title": "Full Stack Developer",
+        "company": "Tech Solutions",
+        "period": "Ene, 2023 — May, 2024 • 1 año 5 meses",
+        "location": "Santiago, Chile",
+        "responsibilities": [
+          "Desarrollé aplicaciones web completas usando React y Node.js.",
+          "Implementé APIs RESTful y servicios backend escalables.",
+          "Colaboré en el diseño de arquitectura de base de datos PostgreSQL.",
+          "Participé en code reviews y mentoría de desarrolladores junior."
+        ]
       }
     ]
   },
@@ -80,3 +92,4 @@
     "downloadCV": "Descargar CV"
   }
 }
+

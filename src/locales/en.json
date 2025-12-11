@@ -1,7 +1,7 @@
 {
   "nav": {
     "about": "About",
-    "resume": "Resume",
+    "experience": "Experience",
     "projects": "Projects"
   },
   "profile": {
@@ -14,23 +14,23 @@
   "about": {
     "title": "About Me",
     "description": "Hi! I'm Ignacio Muñoz, a computer engineering student with a great passion for technology and problem-solving. I love developing software and optimizing algorithms. Here you'll find my projects, experience, and what motivates me in the world of technology.",
-    "whatImDoing": "What I'm doing",
-    "services": {
-      "webDev": {
-        "title": "Web Development",
-        "description": "High-quality website development at a professional level."
+    "specializations": {
+      "title": "Areas of Expertise",
+      "fullstack": {
+        "title": "Full Stack Development",
+        "description": "End-to-end web application development with React, Node.js and modern databases"
       },
-      "backend": {
-        "title": "Backend Development",
-        "description": "Optimized backend services for high performance and scalability."
+      "api": {
+        "title": "API Development",
+        "description": "Design and implementation of scalable and secure REST and GraphQL APIs"
       },
-      "gameDev": {
-        "title": "Game Development",
-        "description": "Video game projects as a hobby."
+      "database": {
+        "title": "Database Design",
+        "description": "Architecture and optimization of SQL and NoSQL databases"
       },
-      "mobile": {
-        "title": "Mobile Applications",
-        "description": "App development for Android and iOS."
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "description": "Deployment and automation with Docker, CI/CD and cloud services"
       }
     }
   },
@@ -60,6 +60,18 @@
           "Collaborated with the development team to improve system integration and efficiency.",
           "Performed code testing and debugging to ensure proper functionality."
         ]
+      },
+      {
+        "title": "Full Stack Developer",
+        "company": "Tech Solutions",
+        "period": "Jan, 2023 — May, 2024 • 1 year 5 months",
+        "location": "Santiago, Chile",
+        "responsibilities": [
+          "Developed full-stack web applications using React and Node.js.",
+          "Implemented RESTful APIs and scalable backend services.",
+          "Collaborated on PostgreSQL database architecture design.",
+          "Participated in code reviews and mentored junior developers."
+        ]
       }
     ]
   },
@@ -80,3 +92,4 @@
     "downloadCV": "Download CV"
   }
 }
+
