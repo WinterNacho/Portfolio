@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "resume": "Resumen",
+    "projects": "Proyectos"
+  },
+  "profile": {
+    "name": "Ignacio Muñoz",
+    "role": "Software Engineer",
+    "email": "ignaciomu216@gmail.com",
+    "location": "Santiago, Chile",
+    "available": "Disponible para trabajar"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "¡Hola! Soy Ignacio Muñoz, ingeniero en computación con una gran pasión por la tecnología y la resolución de problemas. Me encanta desarrollar software y optimizar algoritmos. Aquí encontrarás mis proyectos, experiencia y lo que me motiva en el mundo de la tecnología.",
+    "whatImDoing": "Lo que estoy haciendo",
+    "services": {
+      "webDev": {
+        "title": "Desarrollo Web",
+        "description": "Creación de sitios web de alta calidad a nivel profesional."
+      },
+      "backend": {
+        "title": "Desarrollo Backend",
+        "description": "Servicios backend optimizados para alto rendimiento y escalabilidad."
+      },
+      "gameDev": {
+        "title": "Desarrollo de Videojuegos",
+        "description": "Proyectos de videojuegos como hobby."
+      },
+      "mobile": {
+        "title": "Aplicaciones Móviles",
+        "description": "Desarrollo de apps para Android e iOS."
+      }
+    }
+  },
+  "resume": {
+    "education": "Educación",
+    "experience": "Experiencia",
+    "educationData": [
+      {
+        "institution": "Universidad de Chile",
+        "degree": "Ingeniería Civil en Computación",
+        "period": "2020 — Presente"
+      },
+      {
+        "institution": "Universidad de Chile",
+        "degree": "Bachiller, mención en Ciencias Naturales y Exactas",
+        "period": "2019 — 2020"
+      }
+    ],
+    "experienceData": [
+      {
+        "title": "Software Engineer Intern",
+        "company": "Wherex",
+        "period": "Jun, 2024 — Sep, 2024 • 4 meses",
+        "location": "Chile",
+        "responsibilities": [
+          "Desarrollé un microservicio para la integración de un chatbot utilizando PHP, JavaScript y Python.",
+          "Colaboré con el equipo de desarrollo para mejorar la integración y eficiencia del sistema.",
+          "Realicé pruebas y depuración del código para asegurar su correcto funcionamiento."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "viewDemo": "Ver Demo",
+    "viewCode": "Ver Código",
+    "technologies": "Tecnologías"
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Herramientas",
+    "databases": "Bases de Datos"
+  },
+  "common": {
+    "downloadCV": "Descargar CV"
+  }
+}

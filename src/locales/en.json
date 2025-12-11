@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "projects": "Projects"
+  },
+  "profile": {
+    "name": "Ignacio Muñoz",
+    "role": "Software Engineer",
+    "email": "ignaciomu216@gmail.com",
+    "location": "Santiago, Chile",
+    "available": "Available for work"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hi! I'm Ignacio Muñoz, a computer engineering student with a great passion for technology and problem-solving. I love developing software and optimizing algorithms. Here you'll find my projects, experience, and what motivates me in the world of technology.",
+    "whatImDoing": "What I'm doing",
+    "services": {
+      "webDev": {
+        "title": "Web Development",
+        "description": "High-quality website development at a professional level."
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Optimized backend services for high performance and scalability."
+      },
+      "gameDev": {
+        "title": "Game Development",
+        "description": "Video game projects as a hobby."
+      },
+      "mobile": {
+        "title": "Mobile Applications",
+        "description": "App development for Android and iOS."
+      }
+    }
+  },
+  "resume": {
+    "education": "Education",
+    "experience": "Experience",
+    "educationData": [
+      {
+        "institution": "Universidad de Chile",
+        "degree": "Computer Engineering",
+        "period": "2020 — Present"
+      },
+      {
+        "institution": "Universidad de Chile",
+        "degree": "Bachelor's Degree in Natural and Exact Sciences",
+        "period": "2019 — 2020"
+      }
+    ],
+    "experienceData": [
+      {
+        "title": "Software Engineer Intern",
+        "company": "Wherex",
+        "period": "Jun, 2024 — Sep, 2024 • 4 months",
+        "location": "Chile",
+        "responsibilities": [
+          "Developed a microservice for chatbot integration using PHP, JavaScript, and Python.",
+          "Collaborated with the development team to improve system integration and efficiency.",
+          "Performed code testing and debugging to ensure proper functionality."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "viewDemo": "View Demo",
+    "viewCode": "View Code",
+    "technologies": "Technologies"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools",
+    "databases": "Databases"
+  },
+  "common": {
+    "downloadCV": "Download CV"
+  }
+}

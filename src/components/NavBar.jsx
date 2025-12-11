@@ -1,51 +1,57 @@
-import LanguageButton from './LanguageButton';
-import ThemeToggle from './ThemeToggle';
+import { useTranslation } from '../hooks/useTranslation'
+import LanguageButton from './LanguageButton'
+import ThemeToggle from './ThemeToggle'
+import PropTypes from 'prop-types'
 
 function NavBar({ setActiveSection, activeSection }) {
+  const { t } = useTranslation()
+
+  const navItems = [
+    { id: 'about', label: t('nav.about') },
+    { id: 'resume', label: t('nav.resume') },
+    { id: 'projects', label: t('nav.projects') }
+  ]
+
   return (
-    <div className="flex justify-between items-center h-[60px] min-h-[60px]">
-      <nav className="card p-4 h-full flex items-center">
-        <ul className="flex gap-10 mx-4">
-          <li>
-            <button
-              onClick={() => setActiveSection('about')}
-              className={`${activeSection === 'about' ? 'text-amber-400' : 'text-zinc-400'} hover:text-amber-300`}
-            >
-              Sobre mí
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => setActiveSection('resume')}
-              className={`${activeSection === 'resume' ? 'text-amber-400' : 'text-zinc-400'} hover:text-amber-300`}
-            >
-              Resumen
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => setActiveSection('projects')}
-              className={`${activeSection === 'projects' ? 'text-amber-400' : 'text-zinc-400'} hover:text-amber-300`}
-            >
-              Proyectos
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => setActiveSection('games')}
-              className={`${activeSection === 'games' ? 'text-amber-400' : 'text-zinc-400'} hover:text-amber-300`}
-            >
-              Habilidades
-            </button>
-          </li>
+    <div className="navbar-container">
+      <nav className="card navbar-nav">
+        <ul className="navbar-list">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <button
+                onClick={() => setActiveSection(item.id)}
+                className="transition-colors navbar-button"
+                style={{
+                  color: activeSection === item.id ? 'var(--accent-primary)' : 'var(--text-secondary)'
+                }}
+                onMouseEnter={(e) => {
+                  if (activeSection !== item.id) {
+                    e.currentTarget.style.color = 'var(--accent-hover)'
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (activeSection !== item.id) {
+                    e.currentTarget.style.color = 'var(--text-secondary)'
+                  }
+                }}
+              >
+                {item.label}
+              </button>
+            </li>
+          ))}
         </ul>
       </nav>
-      <div className="flex gap-4 justify-end">
+      <div className="navbar-controls">
         <LanguageButton />
         <ThemeToggle />
       </div>
     </div>
-  );
+  )
 }
 
-export default NavBar;
+NavBar.propTypes = {
+  setActiveSection: PropTypes.func.isRequired,
+  activeSection: PropTypes.string.isRequired
+}
+
+export default NavBar

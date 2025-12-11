@@ -1,56 +1,81 @@
 import { Smartphone, Code, Gamepad, Database } from "lucide-react"
+import { useTranslation } from "../hooks/useTranslation"
+
 function AboutMe() {
+  const { t } = useTranslation()
   const servicesData = [
     {
-      title: "Desarrollo Web",
-      description: "Creación de sitios web de alta calidad a nivel profesional.",
+      title: t('about.services.webDev.title'),
+      description: t('about.services.webDev.description'),
       icon: Code,
-      iconColor: "text-yellow-500",
     },
     {
-      title: "Desarrollo Backend",
-      description: "Servicios backend optimizados para alto rendimiento y escalabilidad.",
+      title: t('about.services.backend.title'),
+      description: t('about.services.backend.description'),
       icon: Database,
-      iconColor: "text-yellow-500",
     },
     {
-      title: "Desarrollo de Videojuegos",
-      description: "Proyectos de videojuegos como hobby.",
+      title: t('about.services.gameDev.title'),
+      description: t('about.services.gameDev.description'),
       icon: Gamepad,
-      iconColor: "text-yellow-500",
     },
     {
-      title: "Aplicaciones Móviles",
-      description: "Desarrollo de apps para Android e iOS.",
+      title: t('about.services.mobile.title'),
+      description: t('about.services.mobile.description'),
       icon: Smartphone,
-      iconColor: "text-yellow-500",
     },
-  ];
+  ]
+
   return (
     <div className="space-y-12">
       <section id="about">
-        <h2 className="text-3xl font-bold mb-6">Sobre mí</h2>
-        <div className="space-y-4 text-zinc-400">
-          <p>
-            ¡Hola! Soy Ignacio Muñoz, ingeniero en computación con una gran pasión por la tecnología y la resolución de problemas.
-            Me encanta desarrollar software y optimizar algoritmos.
-            Aquí encontrarás mis proyectos, experiencia y lo que me motiva en el mundo de la tecnología.
-          </p>
-
+        <h2 
+          className="text-3xl font-bold mb-6"
+          style={{ color: 'var(--text-primary)' }}
+        >
+          {t('about.title')}
+        </h2>
+        <div 
+          className="space-y-4"
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          <p>{t('about.description')}</p>
         </div>
       </section>
       <section>
-        <h2 className="text-3xl font-bold mb-8">Lo que estoy haciendo</h2>
+        <h2 
+          className="text-3xl font-bold mb-8"
+          style={{ color: 'var(--text-primary)' }}
+        >
+          {t('about.whatImDoing')}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {servicesData.map((service, index) => (
-            <div key={index} className="bg-[#141414] rounded-lg p-6 border border-gray-800 flex flex-col">
+            <div 
+              key={index} 
+              className="rounded-lg p-6 border flex flex-col"
+              style={{ 
+                backgroundColor: 'var(--bg-tertiary)', 
+                borderColor: 'var(--border-secondary)' 
+              }}
+            >
               <div className="flex items-start gap-4 mb-4">
                 <div className="p-2 rounded-md">
-                  <service.icon className={`${service.iconColor} w-8 h-8`} />
+                  <service.icon 
+                    className="w-8 h-8"
+                    style={{ color: 'var(--accent-primary)' }}
+                  />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-400">{service.description}</p>
+                  <h3 
+                    className="text-xl font-semibold mb-2"
+                    style={{ color: 'var(--text-primary)' }}
+                  >
+                    {service.title}
+                  </h3>
+                  <p style={{ color: 'var(--text-secondary)' }}>
+                    {service.description}
+                  </p>
                 </div>
               </div>
             </div>

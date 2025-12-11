@@ -3,7 +3,6 @@ import NavBar from './NavBar'
 import Resume from './Resumen'
 import AboutMe from './AboutMe'
 import Projects from './Projects'
-import Games from './Games'
 
 function Content() {
   const [activeSection, setActiveSection] = useState('about')
@@ -11,27 +10,26 @@ function Content() {
   const renderContent = () => {
     switch (activeSection) {
       case 'about':
-        return <AboutMe />
+        return <AboutMe key="about" />
       case 'resume':
-        return <Resume />
+        return <Resume key="resume" />
       case 'projects':
-        return <Projects />
-      case 'games':
-          return <Games />
+        return <Projects key="projects" />
       default:
-        return <AboutMe />
+        return <AboutMe key="about-default" />
     }
   }
 
   return (
-    <div className="flex flex-col gap-4 h-[calc(100vh-3rem)] flex-grow">
+    <div className="content-container">
       <NavBar setActiveSection={setActiveSection} activeSection={activeSection} />
-      <div className="card flex-grow overflow-auto p-10">
-        {renderContent()}
+      <div className="card content-main">
+        <div className="fade-in">
+          {renderContent()}
+        </div>
       </div>
     </div>
   )
 }
 
 export default Content
-

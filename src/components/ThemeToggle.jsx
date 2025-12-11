@@ -1,31 +1,24 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import { Moon, Sun } from 'lucide-react'
+import { AppContext } from '../context/AppContext'
 
 function ThemeToggle() {
-  const [isDark, setIsDark] = useState(true)
-
-  const toggleTheme = () => {
-    setIsDark(!isDark)
-    if (isDark) {
-      document.documentElement.style.setProperty('background-color', 'rgb(244, 244, 245)')
-      document.documentElement.style.setProperty('color', 'rgb(24, 24, 27)')
-    } else {
-      document.documentElement.style.setProperty('background-color', 'rgb(9, 9, 11)')
-      document.documentElement.style.setProperty('color', 'rgb(228, 228, 231)')
-    }
-  }
+  const { theme, toggleTheme } = useContext(AppContext)
+  const isDark = theme === 'dark'
 
   return (
     <div className="flex justify-between items-center card p-4">
       <button
         onClick={toggleTheme}
-        className="text-zinc-400 hover:text-amber-400 transition-colors "
-        aria-label="Toggle theme"
+        className="transition-colors"
+        style={{ color: 'var(--text-secondary)' }}
+        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-primary)'}
+        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
+        aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
       >
         {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
       </button>
     </div>
-
   )
 }
 

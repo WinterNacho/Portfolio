@@ -4,7 +4,7 @@ import ProfileSidebar from './components/ProfileSidebar'
 
 function App() {
   return (
-    <div className="flex m-6 gap-6 ">
+    <div className="app-container">
       <ProfileSidebar />
       <Content />
     </div>
