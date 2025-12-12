@@ -3,7 +3,6 @@ import { useTranslation } from '../hooks/useTranslation'
 import { Menu, X } from 'lucide-react'
 import LanguageButton from './LanguageButton'
 import ThemeToggle from './ThemeToggle'
-import PropTypes from 'prop-types'
 
 function NavBar({ setActiveSection, activeSection }) {
   const { t } = useTranslation()
@@ -112,11 +111,6 @@ function NavBar({ setActiveSection, activeSection }) {
       </div>
     </div>
   )
-}
-
-NavBar.propTypes = {
-  setActiveSection: PropTypes.func.isRequired,
-  activeSection: PropTypes.string.isRequired
 }
 
 export default NavBar

@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import es from '../locales/es.json'
 import en from '../locales/en.json'
 
@@ -74,9 +73,5 @@ export function AppProvider({ children }) {
       {children}
     </AppContext.Provider>
   )
-}
-
-AppProvider.propTypes = {
-  children: PropTypes.node.isRequired
 }
 
