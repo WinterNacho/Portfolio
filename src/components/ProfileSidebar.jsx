@@ -13,7 +13,7 @@ function ProfileSidebar() {
     <aside className="card card-container p-[1.5rem]">
       <div className="flex flex-col items-center text-center mb-8">
         <div className="relative w-42 h-42 mb-4">
-          <img src={"/me.JPG"} alt={t('profile.name')} className="rounded-3xl" />
+          <img src={"/me.jpg"} alt={t('profile.name')} className="rounded-3xl" />
           <div 
             className="absolute bottom-2 right-2 w-3 h-3 rounded-full"
             style={{ backgroundColor: 'var(--status-online)' }}
