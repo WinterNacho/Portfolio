@@ -49,7 +49,7 @@ function AboutMe() {
         >
           {t('about.specializations.title')}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5" style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {specializationsData.map((spec, index) => (
             <div 
               key={index} 
