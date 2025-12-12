@@ -20,21 +20,35 @@ function NavBar({ setActiveSection, activeSection }) {
     setIsMobileMenuOpen(false) // Close menu after selection
   }
 
+  // Get current section label
+  const currentSectionLabel = navItems.find(item => item.id === activeSection)?.label || t('nav.about')
+
   return (
     <div className="navbar-container">
-      {/* Hamburger Button - Mobile Only */}
-      <button
-        className="hamburger-button card"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle menu"
-        aria-expanded={isMobileMenuOpen}
-      >
-        {isMobileMenuOpen ? (
-          <X className="w-5 h-5" style={{ color: 'var(--text-primary)' }} />
-        ) : (
-          <Menu className="w-5 h-5" style={{ color: 'var(--text-primary)' }} />
-        )}
-      </button>
+      {/* Mobile Left Section - Hamburger + Current Section */}
+      <div className="navbar-mobile-left">
+        {/* Hamburger Button - Mobile Only */}
+        <button
+          className="hamburger-button card"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
+        >
+          {isMobileMenuOpen ? (
+            <X className="w-5 h-5" style={{ color: 'var(--text-primary)' }} />
+          ) : (
+            <Menu className="w-5 h-5" style={{ color: 'var(--text-primary)' }} />
+          )}
+        </button>
+        
+        {/* Current Section Label - Mobile Only */}
+        <span 
+          className="current-section-label"
+          style={{ color: 'var(--text-primary)' }}
+        >
+          {currentSectionLabel}
+        </span>
+      </div>
 
       {/* Desktop Navigation */}
       <nav className="card navbar-nav navbar-desktop">
