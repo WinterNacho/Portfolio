@@ -7,8 +7,8 @@ function LanguageButton() {
   return (
     <button
       onClick={toggleLanguage}
-      className="card p-4 w-full flex justify-center items-center gap-2 transition-colors font-medium cursor-pointer"
-      style={{ color: 'var(--text-secondary)' }}
+      className="card p-4 flex justify-center items-center gap-2 transition-colors font-medium cursor-pointer"
+      style={{ color: 'var(--text-secondary)', width: '80px', minWidth: '80px' }}
       onMouseEnter={(e) => {
         e.currentTarget.style.color = 'var(--accent-primary)'
         e.currentTarget.style.borderColor = 'var(--accent-primary)'

@@ -63,6 +63,25 @@ function Experience() {
                 ))}
               </ul>
             )}
+
+            {/* Technologies */}
+            {item.technologies && item.technologies.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-4">
+                {item.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="px-3 py-1 rounded text-xs font-medium"
+                    style={{
+                      backgroundColor: 'var(--bg-secondary)',
+                      color: 'var(--accent-primary)',
+                      border: '1px solid var(--border-secondary)'
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>

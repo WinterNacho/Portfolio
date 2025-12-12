@@ -37,7 +37,6 @@
   
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 /* Light Theme - Pastel */
@@ -72,7 +71,7 @@
   border-radius: 1rem;
   box-shadow: var(--shadow-card);
   border: 1px solid var(--border-primary);
-  transition: border-color var(--transition-normal), background-color var(--transition-normal);
+  transition: border-color var(--transition-fast);
 }
 
 .card-container {
@@ -85,6 +84,7 @@
   display: flex;
   gap: 1.5rem;
   margin: 1.5rem;
+  background-color: var(--bg-primary);
 }
 
 /* Mobile: Stack vertically */
@@ -164,6 +164,7 @@
   height: 60px;
   min-height: 60px;
   gap: 1rem;
+  background-color: transparent;
 }
 
 .navbar-nav {

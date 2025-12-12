@@ -58,7 +58,8 @@
         "responsibilities": [
           "Optimicé queries SQL en la plataforma, reduciendo los tiempos de respuesta al eliminar operaciones innecesarias en las consultas.",
           "Depuré y resolví bugs en producción en componentes escritos en PHP, JavaScript, Go, Angular y React. Aproveché herramientas asistidas por IA (Windsurf, Codex) para acelerar ciclos de desarrollo y depuración."
-        ]
+        ],
+        "technologies": ["SQL", "PHP", "JavaScript", "Go", "Angular", "React"]
       },
       {
         "title": "Desarrollador Externo",
@@ -67,7 +68,8 @@
         "location": "Santiago, Chile (Remoto)",
         "responsibilities": [
           "Continuación del trabajo como practicante. Desarrollo de pruebas de concepto y aplicaciones .NET en producción con SQL Server para evaluar factibilidad técnica y respaldar decisiones arquitectónicas del equipo."
-        ]
+        ],
+        "technologies": [".NET", "C#", "SQL Server"]
       },
       {
         "title": "Practicante Software Engineer – Área de Mejora Continua",
@@ -77,7 +79,8 @@
         "responsibilities": [
           "Mejoré parte del sistema de autenticación utilizando librerías de biometría, habilitando verificación segura de usuarios en producción.",
           "Optimicé consultas SQL lentas identificadas mediante profiling y refactoricé jobs programados, reduciendo tiempos de ejecución y carga en base de datos."
-        ]
+        ],
+        "technologies": [".NET", "C#", "SQL Server", "Biometrics", "Datadog"]
       },
       {
         "title": "Software Engineer Intern",
@@ -86,7 +89,8 @@
         "location": "Santiago, Chile (Remoto)",
         "responsibilities": [
           "Integré chatbot basado en OpenAI en la plataforma y construí microservicio para archivar conversaciones en AWS S3, automatizando respuestas a preguntas frecuentes y reduciendo tickets del equipo de Customer Care."
-        ]
+        ],
+        "technologies": ["OpenAI API", "PHP", "JavaScript", "Python", "AWS S3", "MySQL"]
       }
     ]
   },
@@ -94,7 +98,36 @@
     "title": "Proyectos",
     "viewDemo": "Ver Demo",
     "viewCode": "Ver Código",
-    "technologies": "Tecnologías"
+    "technologies": "Tecnologías",
+    "projectsData": [
+      {
+        "title": "Análisis de Supervivencia con ML",
+        "organization": "Nic Labs",
+        "period": "Agosto 2024 - Diciembre 2024",
+        "description": "Desarrollo de solución de análisis de supervivencia para cliente externo, aplicando modelos de machine learning (Cox, Random Survival Forest, DeepSurv) para predecir la ocurrencia de eventos.",
+        "technologies": ["Python", "Machine Learning", "Cox Model", "Random Survival Forest", "DeepSurv"],
+        "demoUrl": null,
+        "githubUrl": null
+      },
+      {
+        "title": "Integración de Chatbot con IA",
+        "organization": "Wherex",
+        "period": "Junio 2024 - Septiembre 2024",
+        "description": "Integración de chatbot basado en OpenAI en la plataforma y construcción de microservicio para archivar conversaciones en AWS S3, automatizando respuestas a preguntas frecuentes.",
+        "technologies": ["OpenAI API", "PHP", "JavaScript", "Python", "AWS S3", "Microservices"],
+        "demoUrl": null,
+        "githubUrl": null
+      },
+      {
+        "title": "Portfolio Personal",
+        "organization": "Proyecto Personal",
+        "period": "2025",
+        "description": "Sitio web de portafolio profesional con sistema de temas (dark/light), internacionalización (ES/EN), y diseño responsive moderno.",
+        "technologies": ["React", "Tailwind CSS", "Vite", "Context API"],
+        "demoUrl": null,
+        "githubUrl": "https://github.com/WinterNacho/Portfolio"
+      }
+    ]
   },
   "skills": {
     "title": "Habilidades Técnicas",

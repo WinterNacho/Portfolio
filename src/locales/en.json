@@ -58,7 +58,8 @@
         "responsibilities": [
           "Optimized SQL queries in the platform, reducing response times by removing unnecessary operations in queries.",
           "Debugged and resolved production bugs across components written in PHP, JavaScript, Go, Angular, and React. Leveraged AI-assisted tools (Windsurf, Codex) to accelerate development and debugging cycles."
-        ]
+        ],
+        "technologies": ["SQL", "PHP", "JavaScript", "Go", "Angular", "React"]
       },
       {
         "title": "External Developer",
@@ -67,7 +68,8 @@
         "location": "Santiago, Chile (Remote)",
         "responsibilities": [
           "Continuation of internship work. Developed proof-of-concept solutions and production .NET applications with SQL Server to evaluate technical feasibility and support team architectural decisions."
-        ]
+        ],
+        "technologies": [".NET", "C#", "SQL Server"]
       },
       {
         "title": "Software Engineer Intern – Continuous Improvement Area",
@@ -77,7 +79,8 @@
         "responsibilities": [
           "Improved part of the authentication system using biometric libraries, enabling secure user verification in production.",
           "Optimized slow SQL queries identified through profiling and refactored scheduled jobs, reducing execution times and database load."
-        ]
+        ],
+        "technologies": [".NET", "C#", "SQL Server", "Biometrics", "Datadog"]
       },
       {
         "title": "Software Engineer Intern",
@@ -86,7 +89,8 @@
         "location": "Santiago, Chile (Remote)",
         "responsibilities": [
           "Integrated OpenAI-powered chatbot into platform and built microservice to archive conversations in AWS S3, automating responses to frequent queries and reducing Customer Care team tickets."
-        ]
+        ],
+        "technologies": ["OpenAI API", "PHP", "JavaScript", "Python", "AWS S3", "MySQL"]
       }
     ]
   },
@@ -94,7 +98,36 @@
     "title": "Projects",
     "viewDemo": "View Demo",
     "viewCode": "View Code",
-    "technologies": "Technologies"
+    "technologies": "Technologies",
+    "projectsData": [
+      {
+        "title": "Survival Analysis with ML",
+        "organization": "Nic Labs",
+        "period": "August 2024 - December 2024",
+        "description": "Development of survival analysis solution for external client, applying machine learning models (Cox, Random Survival Forest, DeepSurv) to predict event occurrence.",
+        "technologies": ["Python", "Machine Learning", "Cox Model", "Random Survival Forest", "DeepSurv"],
+        "demoUrl": null,
+        "githubUrl": null
+      },
+      {
+        "title": "AI Chatbot Integration",
+        "organization": "Wherex",
+        "period": "June 2024 - September 2024",
+        "description": "Integration of OpenAI-powered chatbot into platform and built microservice to archive conversations in AWS S3, automating responses to frequent queries.",
+        "technologies": ["OpenAI API", "PHP", "JavaScript", "Python", "AWS S3", "Microservices"],
+        "demoUrl": null,
+        "githubUrl": null
+      },
+      {
+        "title": "Personal Portfolio",
+        "organization": "Personal Project",
+        "period": "2025",
+        "description": "Professional portfolio website with theme system (dark/light), internationalization (ES/EN), and modern responsive design.",
+        "technologies": ["React", "Tailwind CSS", "Vite", "Context API"],
+        "demoUrl": null,
+        "githubUrl": "https://github.com/WinterNacho/Portfolio"
+      }
+    ]
   },
   "skills": {
     "title": "Technical Skills",

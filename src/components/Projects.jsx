@@ -3,27 +3,7 @@ import { ExternalLink, Github } from "lucide-react"
 
 function Projects() {
   const { t } = useTranslation()
-
-  // Sample projects - Replace with your actual projects
-  const projects = [
-    {
-      title: "Portfolio Website",
-      description: "Personal portfolio website built with React and Tailwind CSS featuring dark/light theme and internationalization.",
-      technologies: ["React", "Tailwind CSS", "Vite"],
-      demoUrl: "#",
-      githubUrl: "https://github.com/ignacio-munoz/portfolio",
-      image: null // Add image URL when available
-    },
-    {
-      title: "Chatbot Microservice",
-      description: "Microservice for chatbot integration developed during internship at Wherex using PHP, JavaScript, and Python.",
-      technologies: ["PHP", "JavaScript", "Python", "REST API"],
-      demoUrl: null,
-      githubUrl: null,
-      image: null
-    },
-    // Add more projects here
-  ]
+  const projects = t('projects.projectsData')
 
   return (
     <div>
@@ -50,34 +30,20 @@ function Projects() {
               e.currentTarget.style.borderColor = 'var(--border-primary)'
             }}
           >
-            {/* Project Image Placeholder */}
-            {project.image ? (
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-            ) : (
-              <div 
-                className="w-full h-48 rounded-lg mb-4 flex items-center justify-center"
-                style={{ 
-                  backgroundColor: 'var(--bg-tertiary)',
-                  border: '1px dashed var(--border-secondary)'
-                }}
+            {/* Project Header */}
+            <div className="mb-4">
+              <h3 
+                className="text-xl font-bold mb-1"
+                style={{ color: 'var(--text-primary)' }}
               >
-                <span style={{ color: 'var(--text-tertiary)' }}>
-                  Project Image
-                </span>
+                {project.title}
+              </h3>
+              <div className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+                <span style={{ color: 'var(--accent-primary)' }}>{project.organization}</span>
+                <span>•</span>
+                <span>{project.period}</span>
               </div>
-            )}
-
-            {/* Project Title */}
-            <h3 
-              className="text-xl font-bold mb-2"
-              style={{ color: 'var(--text-primary)' }}
-            >
-              {project.title}
-            </h3>
+            </div>
 
             {/* Project Description */}
             <p 
