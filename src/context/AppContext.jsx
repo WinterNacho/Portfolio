@@ -15,7 +15,8 @@ const translations = {
 export function AppProvider({ children }) {
   // Get saved preferences from localStorage or use defaults
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'dark'
+    const savedTheme = localStorage.getItem('theme') || 'dark'
+    return savedTheme === 'green' ? 'dark' : savedTheme
   })
   
   const [language, setLanguage] = useState(() => {
@@ -25,7 +26,9 @@ export function AppProvider({ children }) {
   // Apply theme to document
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
+    if (theme !== 'green') {
+      localStorage.setItem('theme', theme)
+    }
   }, [theme])
 
   // Save language preference
@@ -36,7 +39,23 @@ export function AppProvider({ children }) {
 
   // Toggle theme
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark')
+    setTheme(prevTheme => {
+      if (prevTheme === 'green') {
+        const previousTheme = localStorage.getItem('previousTheme') || 'dark'
+        return previousTheme === 'dark' ? 'light' : 'dark'
+      }
+      return prevTheme === 'dark' ? 'light' : 'dark'
+    })
+  }
+
+  const toggleGreenTheme = () => {
+    setTheme(prevTheme => {
+      if (prevTheme === 'green') {
+        return localStorage.getItem('previousTheme') || 'dark'
+      }
+      localStorage.setItem('previousTheme', prevTheme)
+      return 'green'
+    })
   }
 
   // Toggle language
@@ -64,6 +83,7 @@ export function AppProvider({ children }) {
     theme,
     language,
     toggleTheme,
+    toggleGreenTheme,
     toggleLanguage,
     t
   }

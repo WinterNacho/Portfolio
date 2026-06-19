@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from '../hooks/useTranslation'
 import NavBar from './NavBar'
 import Experience from './Experience'
 import AboutMe from './AboutMe'
 import Projects from './Projects'
 
 function Content() {
+  const { t } = useTranslation()
+
   // Initialize from URL hash or default to 'about'
   const getInitialSection = () => {
     const hash = window.location.hash.replace('#', '')
@@ -46,14 +49,15 @@ function Content() {
   }
 
   return (
-    <div className="content-container">
+    <main className="content-container">
       <NavBar setActiveSection={handleSetActiveSection} activeSection={activeSection} />
-      <div className="card content-main">
-        <div className="fade-in">
-          {renderContent()}
-        </div>
-      </div>
-    </div>
+      <section className="card content-main fade-in" aria-live="polite">
+        {renderContent()}
+      </section>
+      <footer className="site-footer" style={{ color: 'var(--text-tertiary)' }}>
+        {t('common.footer')}
+      </footer>
+    </main>
   )
 }
 

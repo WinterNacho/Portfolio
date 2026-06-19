@@ -28,22 +28,25 @@ function AboutMe() {
 
   return (
     <div className="space-y-12">
-      <section id="about">
-        <h2 
+      <section id="about" aria-labelledby="about-title">
+        <h2
+          id="about-title"
           className="text-3xl font-bold mb-6"
           style={{ color: 'var(--text-primary)' }}
         >
           {t('about.title')}
         </h2>
-        <div 
+        <div
           className="space-y-4"
           style={{ color: 'var(--text-secondary)' }}
         >
           <p>{t('about.description')}</p>
         </div>
       </section>
-      <section>
-        <h2 
+
+      <section aria-labelledby="specializations-title">
+        <h2
+          id="specializations-title"
           className="text-3xl font-bold mb-8"
           style={{ color: 'var(--text-primary)' }}
         >
@@ -51,24 +54,22 @@ function AboutMe() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {specializationsData.map((spec, index) => (
-            <div 
-              key={index} 
-              className="rounded-lg p-4 border flex items-center gap-4"
-              style={{ 
-                backgroundColor: 'var(--bg-tertiary)', 
-                borderColor: 'var(--border-secondary)',
+            <article
+              key={index}
+              className="spec-card rounded-lg p-4 border flex items-center gap-4"
+              style={{
                 minHeight: '110px',
                 width: '100%'
               }}
             >
-              <div className="p-2 rounded-md flex-shrink-0">
-                <spec.icon 
+              <div className="p-2 rounded-md flex-shrink-0" aria-hidden="true">
+                <spec.icon
                   className="w-7 h-7"
                   style={{ color: 'var(--accent-primary)' }}
                 />
               </div>
               <div>
-                <h3 
+                <h3
                   className="text-lg font-semibold mb-1"
                   style={{ color: 'var(--text-primary)' }}
                 >
@@ -78,27 +79,27 @@ function AboutMe() {
                   {spec.description}
                 </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
-      {/* Education Section */}
-      <section>
+      <section aria-labelledby="education-title">
         <div className="flex items-center gap-3 mb-6">
-          <GraduationCap size={28} style={{ color: 'var(--text-primary)' }} />
-          <h2 className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>
+          <GraduationCap size={28} style={{ color: 'var(--text-primary)' }} aria-hidden="true" />
+          <h2 id="education-title" className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>
             {t('resume.education')}
           </h2>
         </div>
 
         <div className="space-y-6">
           {t('resume.educationData').map((item, index) => (
-            <div key={index} className="relative pl-8">
-              <div 
+            <article key={index} className="relative pl-8">
+              <div
                 className="absolute left-0 top-2 w-3 h-3 rounded-full"
                 style={{ backgroundColor: 'var(--accent-primary)' }}
-              ></div>
+                aria-hidden="true"
+              />
               <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>
                 {item.institution}
               </h3>
@@ -106,9 +107,11 @@ function AboutMe() {
                 {item.degree}
               </p>
               <p className="mt-1 text-sm" style={{ color: 'var(--accent-primary)' }}>
-                {item.period}
+                <time dateTime={item.startDate}>{item.periodStart}</time>
+                {' — '}
+                <time dateTime={item.endDate}>{item.periodEnd}</time>
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </section>

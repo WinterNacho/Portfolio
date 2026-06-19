@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext'
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useContext(AppContext)
-  const isDark = theme === 'dark'
+  const isDark = theme === 'dark' || theme === 'green'
 
   return (
     <button

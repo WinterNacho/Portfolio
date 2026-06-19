@@ -41,12 +41,20 @@
       {
         "institution": "Universidad de Chile",
         "degree": "Ingeniería Civil en Computación",
-        "period": "2020 — 2025"
+        "period": "2020 — 2025",
+        "periodStart": "2020",
+        "periodEnd": "2025",
+        "startDate": "2020",
+        "endDate": "2025"
       },
       {
         "institution": "Universidad de Chile",
         "degree": "Bachiller, mención en Ciencias Naturales y Exactas",
-        "period": "2019 — 2020"
+        "period": "2019 — 2020",
+        "periodStart": "2019",
+        "periodEnd": "2020",
+        "startDate": "2019",
+        "endDate": "2020"
       }
     ],
     "experienceData": [
@@ -54,6 +62,10 @@
         "title": "Software Engineer I",
         "company": "Wherex",
         "period": "Agosto 2025 — Diciembre 2025",
+        "periodStart": "Agosto 2025",
+        "periodEnd": "Diciembre 2025",
+        "startDate": "2025-08",
+        "endDate": "2025-12",
         "location": "Santiago, Chile (Remoto)",
         "responsibilities": [
           "Optimicé queries SQL en la plataforma, reduciendo los tiempos de respuesta al eliminar operaciones innecesarias en las consultas.",
@@ -65,6 +77,10 @@
         "title": "Desarrollador Externo",
         "company": "Ecert",
         "period": "Junio 2025 — Julio 2025",
+        "periodStart": "Junio 2025",
+        "periodEnd": "Julio 2025",
+        "startDate": "2025-06",
+        "endDate": "2025-07",
         "location": "Santiago, Chile (Remoto)",
         "responsibilities": [
           "Continuación del trabajo como practicante. Desarrollo de pruebas de concepto y aplicaciones .NET en producción con SQL Server para evaluar factibilidad técnica y respaldar decisiones arquitectónicas del equipo."
@@ -75,6 +91,10 @@
         "title": "Practicante Software Engineer – Área de Mejora Continua",
         "company": "Ecert",
         "period": "Marzo 2025 — Julio 2025",
+        "periodStart": "Marzo 2025",
+        "periodEnd": "Julio 2025",
+        "startDate": "2025-03",
+        "endDate": "2025-07",
         "location": "Santiago, Chile (Híbrido)",
         "responsibilities": [
           "Mejoré parte del sistema de autenticación utilizando librerías de biometría, habilitando verificación segura de usuarios en producción.",
@@ -86,6 +106,10 @@
         "title": "Software Engineer Intern",
         "company": "Wherex",
         "period": "Junio 2024 — Septiembre 2024",
+        "periodStart": "Junio 2024",
+        "periodEnd": "Septiembre 2024",
+        "startDate": "2024-06",
+        "endDate": "2024-09",
         "location": "Santiago, Chile (Remoto)",
         "responsibilities": [
           "Integré chatbot basado en OpenAI en la plataforma y construí microservicio para archivar conversaciones en AWS S3, automatizando respuestas a preguntas frecuentes y reduciendo tickets del equipo de Customer Care."
@@ -104,6 +128,10 @@
         "title": "Análisis de Supervivencia con ML",
         "organization": "Nic Labs",
         "period": "Agosto 2024 - Diciembre 2024",
+        "periodStart": "Agosto 2024",
+        "periodEnd": "Diciembre 2024",
+        "startDate": "2024-08",
+        "endDate": "2024-12",
         "description": "Desarrollo de solución de análisis de supervivencia para cliente externo, aplicando modelos de machine learning (Cox, Random Survival Forest, DeepSurv) para predecir la ocurrencia de eventos.",
         "technologies": ["Python", "Machine Learning", "Cox Model", "Random Survival Forest", "DeepSurv"],
         "demoUrl": null,
@@ -113,6 +141,10 @@
         "title": "Integración de Chatbot con IA",
         "organization": "Wherex",
         "period": "Junio 2024 - Septiembre 2024",
+        "periodStart": "Junio 2024",
+        "periodEnd": "Septiembre 2024",
+        "startDate": "2024-06",
+        "endDate": "2024-09",
         "description": "Integración de chatbot basado en OpenAI en la plataforma y construcción de microservicio para archivar conversaciones en AWS S3, automatizando respuestas a preguntas frecuentes.",
         "technologies": ["OpenAI API", "PHP", "JavaScript", "Python", "AWS S3", "Microservices"],
         "demoUrl": null,
@@ -122,6 +154,10 @@
         "title": "Portfolio Personal",
         "organization": "Proyecto Personal",
         "period": "2025",
+        "periodStart": "2025",
+        "periodEnd": "2025",
+        "startDate": "2025",
+        "endDate": "2025",
         "description": "Sitio web de portafolio profesional con sistema de temas (dark/light), internacionalización (ES/EN), y diseño responsive moderno.",
         "technologies": ["React", "Tailwind CSS", "Vite", "Context API"],
         "demoUrl": null,
@@ -137,7 +173,8 @@
     "databases": "Bases de Datos"
   },
   "common": {
-    "downloadCV": "Descargar CV"
+    "downloadCV": "Descargar CV",
+    "footer": "© 2026 Ignacio Muñoz Otárola"
   }
 }
 

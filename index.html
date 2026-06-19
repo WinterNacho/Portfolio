@@ -9,14 +9,21 @@
     <style>
       /* Critical CSS to prevent flash */
       html, body {
-        background-color: #09090b;
-        color: #e4e4e7;
         margin: 0;
         padding: 0;
       }
-      html[data-theme="light"], html[data-theme="light"] body {
+      html:not([data-theme]),
+      html[data-theme="dark"] {
+        background-color: #09090b;
+        color: #e4e4e7;
+      }
+      html[data-theme="light"] {
         background-color: #faf8f5;
         color: #2d2a27;
+      }
+      html[data-theme="green"] {
+        background-color: #071407;
+        color: #d1fae5;
       }
     </style>
     <script>
@@ -37,14 +44,14 @@
     <meta property="og:url" content="https://ignaciomunoz.dev/" />
     <meta property="og:title" content="Ignacio Muñoz Otárola | Software Engineer" />
     <meta property="og:description" content="Software Engineer con experiencia construyendo soluciones que llegan a producción y generan impacto real." />
-    <meta property="og:image" content="/me.JPG" />
+    <meta property="og:image" content="/me.jpg" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ignaciomunoz.dev/" />
     <meta property="twitter:title" content="Ignacio Muñoz Otárola | Software Engineer" />
     <meta property="twitter:description" content="Software Engineer con experiencia construyendo soluciones que llegan a producción y generan impacto real." />
-    <meta property="twitter:image" content="/me.JPG" />
+    <meta property="twitter:image" content="/me.jpg" />
     
     <!-- Additional Meta Tags -->
     <meta name="theme-color" content="#fbbf24" />

@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import { Github, Linkedin, Mail, MapPin, createLucideIcon } from "lucide-react"
+import { AppContext } from '../context/AppContext'
 import { useTranslation } from "../hooks/useTranslation"
 
 // Custom X (Twitter) icon using simpleicons.org SVG
@@ -8,60 +10,64 @@ const XIcon = createLucideIcon("XIcon", [
 
 function ProfileSidebar() {
   const { t } = useTranslation()
+  const { toggleGreenTheme } = useContext(AppContext)
 
   return (
-    <aside className="card card-container p-[1.5rem]">
-      <div className="flex flex-col items-center text-center mb-8">
-        <div className="relative w-42 h-42 mb-4">
-          <img src={"/me.jpg"} alt={t('profile.name')} className="rounded-3xl" />
-          <div 
-            className="absolute bottom-2 right-2 w-3 h-3 rounded-full"
+    <aside className="card card-container profile-sidebar">
+      <div className="profile-header">
+        <button
+          type="button"
+          onClick={toggleGreenTheme}
+          className="profile-photo-button"
+          aria-label={t('profile.name')}
+        >
+          <img src={"/me.jpg"} alt="" className="profile-photo" />
+          <span
+            className="profile-status"
             style={{ backgroundColor: 'var(--status-online)' }}
             title={t('profile.available')}
-          ></div>
+          />
+        </button>
+
+        <div className="profile-identity">
+          <h1 className="profile-name" style={{ color: 'var(--text-primary)' }}>
+            {t('profile.name')}
+          </h1>
+          <p className="profile-role" style={{ color: 'var(--text-secondary)' }}>
+            {t('profile.role')}
+          </p>
         </div>
-        <h1 
-          className="text-2xl font-bold mb-2"
-          style={{ color: 'var(--text-primary)' }}
-        >
-          {t('profile.name')}
-        </h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
-          {t('profile.role')}
-        </p>
       </div>
 
-      <div className="space-y-4 mb-8">
-        <div 
-          className="flex items-center gap-3"
+      <div className="profile-contact">
+        <address
+          className="profile-contact-item not-italic"
           style={{ color: 'var(--text-secondary)' }}
         >
-          <Mail className="w-5 h-5" />
-          <a 
+          <Mail className="profile-contact-icon" aria-hidden="true" />
+          <a
             href={`mailto:${t('profile.email')}`}
-            className="hover:underline transition-colors"
+            className="profile-contact-link hover:underline transition-colors"
             style={{ color: 'var(--text-secondary)' }}
             onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-primary)'}
             onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
           >
             {t('profile.email')}
           </a>
-        </div>
-        <div 
-          className="flex items-center gap-3"
-          style={{ color: 'var(--text-secondary)' }}
-        >
-          <MapPin className="w-5 h-5" />
+        </address>
+
+        <div className="profile-contact-item" style={{ color: 'var(--text-secondary)' }}>
+          <MapPin className="profile-contact-icon" aria-hidden="true" />
           <span>{t('profile.location')}</span>
         </div>
       </div>
 
-      <div className="flex justify-center gap-4 absolute bottom-6 left-0 right-0">
-        <a 
-          href="https://www.linkedin.com/in/winternacho" 
-          target="_blank" 
+      <div className="profile-social">
+        <a
+          href="https://www.linkedin.com/in/winternacho"
+          target="_blank"
           rel="noopener noreferrer"
-          className="transition-colors"
+          className="profile-social-link transition-colors"
           style={{ color: 'var(--text-secondary)' }}
           onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-primary)'}
           onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
@@ -69,11 +75,11 @@ function ProfileSidebar() {
         >
           <Linkedin className="w-5 h-5" />
         </a>
-        <a 
-          href="https://github.com/WinterNacho" 
-          target="_blank" 
+        <a
+          href="https://github.com/WinterNacho"
+          target="_blank"
           rel="noopener noreferrer"
-          className="transition-colors"
+          className="profile-social-link transition-colors"
           style={{ color: 'var(--text-secondary)' }}
           onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-primary)'}
           onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
@@ -81,11 +87,11 @@ function ProfileSidebar() {
         >
           <Github className="w-5 h-5" />
         </a>
-        <a 
-          href="https://x.com/WinterNacho" 
-          target="_blank" 
+        <a
+          href="https://x.com/WinterNacho"
+          target="_blank"
           rel="noopener noreferrer"
-          className="transition-colors"
+          className="profile-social-link transition-colors"
           style={{ color: 'var(--text-secondary)' }}
           onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-primary)'}
           onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
@@ -97,4 +103,5 @@ function ProfileSidebar() {
     </aside>
   )
 }
+
 export default ProfileSidebar

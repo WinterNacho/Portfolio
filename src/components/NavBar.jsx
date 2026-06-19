@@ -23,7 +23,7 @@ function NavBar({ setActiveSection, activeSection }) {
   const currentSectionLabel = navItems.find(item => item.id === activeSection)?.label || t('nav.about')
 
   return (
-    <div className="navbar-container">
+    <header className="navbar-container">
       {/* Mobile Left Section - Hamburger + Current Section */}
       <div className="navbar-mobile-left">
         {/* Hamburger Button - Mobile Only */}
@@ -109,7 +109,7 @@ function NavBar({ setActiveSection, activeSection }) {
         <LanguageButton />
         <ThemeToggle />
       </div>
-    </div>
+    </header>
   )
 }
 
